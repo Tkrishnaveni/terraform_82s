@@ -12,7 +12,7 @@ variable "ec2_tag" {
         project = "expense"
         component = "backend"
         environment = "dev"
-        name = "expense-backend-dev"
+        Name = "expense-backend-dev"
      }
   }
 
@@ -37,6 +37,6 @@ variable "ec2_tag" {
   variable "sg_tags"{
    type = map(string)
     default = {
-        name = "expense-backend-dev"
+        Name = "expense-backend-dev"
   }
   }
