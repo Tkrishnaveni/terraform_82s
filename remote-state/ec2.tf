@@ -1,10 +1,10 @@
-resource "aws_instance" "expense" {
-  ami = local.ami
-  vpc_security_group_ids = local.vpc_id
-  instance_type= local.instance_type
-  tags ={
-    Name = local.name
-    }
+resource "aws_instance" "this" {
+  ami = data.aws_ami.join_devops.id
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
+  instance_type= "t3.micro"
+  tags = {
+     Name = "terraform_demo"
+  }
 }
 
 resource "aws_security_group" "allow_tls" {
