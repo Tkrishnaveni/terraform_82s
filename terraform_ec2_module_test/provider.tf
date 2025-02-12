@@ -5,14 +5,14 @@ terraform {
       version = "5.84.0"
     }
   }
-  backend "s3"{
+  /* backend "s3"{
 
    bucket = "tkv-workspaces"
     key    = "tkv-module-test"
     region = "us-east-1"
     dynamodb_table = "tkv-ws-locking"
     
-  }
+  } */
 }
 
 provider "aws" {
